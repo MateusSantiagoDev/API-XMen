@@ -2,9 +2,9 @@ import express, { Router } from "express";
 import cors from "cors";
 
 import { config } from "dotenv";
-if(process.env.NOD_ENV !== "productin"){
-    config();
-}
+
+config();
+
 
 import { dataBaseConnect } from "./dataBase/mongoDB/connection/connect.js";
 import { makeCreate } from "./factories/createFactory.js";
