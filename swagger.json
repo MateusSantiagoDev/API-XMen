@@ -1,0 +1,177 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API X-Men",
+    "description": "x-men characters api",
+    "termsOfService": "",
+    "contact": {
+      "email": "mateus_santiago2.3@outlook.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "DEV API"
+    },
+    {
+      "url": "",
+      "description": "production API"
+    }
+  ],
+  "paths": {
+    "/characters/create-character": {
+      "post": {
+        "summary": "character creation",
+        "description": "route responsible for creating characters",
+        "tags": ["characters"],
+        "requestyBody": {
+          "content": {
+            "aplication/json": {
+              "schema": {
+                "type": "array",
+                "$ref": "components/schemas/characters"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/characters/all-characters": {
+      "get": {
+        "summary": "list with all characters",
+        "description": "Route responsible for listing all characters",
+        "tags": ["characters"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "aplication/json": {
+                "schema": {
+                  "type": "array",
+                  "$ref": "components/schemas/characters"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/characters/findById-character/{id}": {
+      "get": {
+        "summary": "Search for a character by ID",
+        "description": "Route responsible for searching for character by ID",
+        "tags": ["characters"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "character ID for the search",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "$ref": "#components/schemas/characters"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/characters/update-character/{id}": {
+      "patch": {
+        "summary": "Edit a character by ID",
+        "description": "Route responsible for editing a character by ID",
+        "tags": ["characters"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "character ID for the search",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "$ref": "#components/schemas/characters"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/characters/delete-character/{id}": {
+      "delete": {
+        "summary": "Delete a character by ID",
+        "description": "Route responsible for deleting a character by ID",
+        "tags": ["characters"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "character id for deletion",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "characters": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "ability": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
