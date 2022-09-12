@@ -15,7 +15,7 @@
       "description": "DEV API"
     },
     {
-      "url": "",
+      "url": "https://xmenapi.herokuapp.com",
       "description": "production API"
     }
   ],
@@ -25,12 +25,22 @@
         "summary": "character creation",
         "description": "route responsible for creating characters",
         "tags": ["characters"],
-        "requestyBody": {
+        "requestBody": {
           "content": {
             "aplication/json": {
               "schema": {
                 "type": "array",
-                "$ref": "components/schemas/characters"
+                "$ref": "#components/schemas/characters"
+              },
+              "examples": {
+                "characters": {
+                  "value": {
+                    "name": "Wolverine",
+                    "ability": "Adamantium Claws and Skeleton",
+                    "image": "http://image.com"
+                    
+                  }
+                }
               }
             }
           }
@@ -60,7 +70,7 @@
               "aplication/json": {
                 "schema": {
                   "type": "array",
-                  "$ref": "components/schemas/characters"
+                  "$ref": "#components/schemas/characters"
                 }
               }
             }
