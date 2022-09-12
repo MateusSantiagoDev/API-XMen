@@ -1,4 +1,4 @@
-import { connect } from "mongoose";
+import mongoose from "mongoose";
 /* import { config } from "dotenv";
 
 if(process.env.NOD_ENV !== "productin"){
@@ -7,6 +7,6 @@ if(process.env.NOD_ENV !== "productin"){
 
 export class dataBaseConnect{
     async connection(){
-        await connect(process.env.DATABASE_URL);
+        await mongoose.connect(process.env.DATABASE_URL);
     }
 }
