@@ -42,4 +42,4 @@ app.use("/characters", findAll.route());
 app.use("/characters", findById.route());
 app.use("/characters", delet.route());
 
-app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
+app.listen(port, () => console.info(`Servidor rodando em http://localhost:${port}`));
