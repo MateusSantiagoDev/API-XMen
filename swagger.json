@@ -15,7 +15,7 @@
       "description": "DEV API"
     },
     {
-      "url": "https://xmenapi.herokuapp.com",
+      "url": "https://xmenapi.herokuapp.com/",
       "description": "production API"
     }
   ],
