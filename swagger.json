@@ -107,7 +107,7 @@
     },
     "/characters/search-character": {
       "get": {
-        "summary": "Search for a character by ID",
+        "summary": "Search for a character by name",
         "description": "Route responsible for searching for character by name",
         "tags": ["characters"],
 
