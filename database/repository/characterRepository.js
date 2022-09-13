@@ -24,4 +24,8 @@ export class characterRepository {
   async delete(id) {
     return await characterModel.findOneAndRemove({ id: id });
   }
+
+  async findByName(name){
+    return await characterModel.findOne({ name: name });
+  }
 }

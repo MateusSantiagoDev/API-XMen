@@ -9,6 +9,7 @@ import { makeCreate } from "./factories/createFactory.js";
 import { makeUpdate } from "./factories/updateFactory.js";
 import { makeFindAll } from "./factories/findAllFactory.js";
 import { makeFindById } from "./factories/findByIdFactory.js";
+import { makeFindByName } from "./factories/findByNameFactory.js";
 import { makeDelete } from "./factories/deleteFactory.js";
 
 import swageer from "swagger-ui-express";
@@ -25,6 +26,7 @@ const create = makeCreate(router);
 const update = makeUpdate(router);
 const findAll = makeFindAll(router);
 const findById = makeFindById(router);
+const findByName = makeFindByName(router);
 const delet = makeDelete(router);
 
 app.use(express.json());
@@ -37,6 +39,7 @@ app.use("/characters", create.route());
 app.use("/characters", update.route());
 app.use("/characters", findAll.route());
 app.use("/characters", findById.route());
+app.use("/characters", findByName.route());
 app.use("/characters", delet.route());
 
 app.listen(port, () => console.info(`Servidor rodando em http://localhost:${port}`));
