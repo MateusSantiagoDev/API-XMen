@@ -27,21 +27,18 @@
         "tags": ["characters"],
         "requestBody": {
           "content": {
-            "aplication/json": {
+            "application/json": {
               "schema": {
-                "type": "array",
                 "$ref": "#components/schemas/characters"
-              },
-              "examples": {
+              },              
                 "characters": {
                   "value": {
                     "name": "Wolverine",
                     "ability": "Adamantium Claws and Skeleton",
                     "image": "http://image.com"
-                    
                   }
                 }
-              }
+              
             }
           }
         },
