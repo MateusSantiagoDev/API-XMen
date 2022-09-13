@@ -26,6 +26,6 @@ export class characterRepository {
   }
 
   async findByName(name){
-    return await characterModel.findOne({ name: name });
+    return await characterModel.find({name: name});
   }
 }

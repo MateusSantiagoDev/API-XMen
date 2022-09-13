@@ -5,7 +5,7 @@ export class findByNameRouter {
   }
 
   route() {
-    this.router.get("/search", (req, res) => this.findByName.execute(req, res));
+    this.router.get("/search-character", (req, res) => this.findByName.execute(req, res));
     return this.router;
   }
 }
