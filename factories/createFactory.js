@@ -1,4 +1,4 @@
-import { characterRepository } from "../dataBase/repository/characterRepository.js";
+import { characterRepository } from "../database/repository/characterRepository.js";
 
 import { createUseCase } from "../services/useCase/createUseCase.js";
 import { createController } from "../controllers/createController.js";

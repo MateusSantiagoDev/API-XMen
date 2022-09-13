@@ -4,7 +4,7 @@ dotenv.config();
 import express, { Router } from "express";
 import cors from "cors";
 
-import { dataBaseConnect } from "./dataBase/mongoDB/connection/connect.js";
+import { dataBaseConnect } from "./database/mongoDB/connection/connect.js";
 import { makeCreate } from "./factories/createFactory.js";
 import { makeUpdate } from "./factories/updateFactory.js";
 import { makeFindAll } from "./factories/findAllFactory.js";
