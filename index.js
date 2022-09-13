@@ -15,8 +15,7 @@ import swageer from "swagger-ui-express";
 import swaggerDocument from "./swagger.json" assert{ type: "json" };
 
 
-const DataBase = new dataBaseConnect();
-await DataBase.connection();
+dataBaseConnect.connection();
 
 const port = process.env.PORT || 3000;
 const app = express();
