@@ -5,11 +5,13 @@ export class charactersEntity{
          this.id = character.id ?? randomUUID();
          this.name = character.name;
          this.ability = character.ability;
-         this.image = character.image;
+         this.origin = character.origin;
+         this.image1 = character.image1;
+         this.image2 = character.image2
     }
 
     validate(){
-        if(!this.name || !this.ability || !this.image){
+        if(!this.name || !this.ability || this.origin || !this.image1 || this.image2){
             throw new Error("fill in all fields");
         }
     }
@@ -19,7 +21,9 @@ export class charactersEntity{
             id: this.id,
             name: this.name,
             ability: this.ability,
-            image: this.image,
+            origin: this.origin,
+            image1: this.image1,
+            image2: this.image2,
         }
     }
 }
