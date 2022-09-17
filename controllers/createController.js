@@ -9,7 +9,7 @@ export class createController {
         const response = await this.create.execute(params)
         res.status(201).send(response);
       } catch (err) {
-        res.status(400).send(message.err);
+        res.status(400).send(err.message);
       }
     }
   }

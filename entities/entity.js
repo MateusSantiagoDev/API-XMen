@@ -11,7 +11,7 @@ export class charactersEntity{
     }
 
     validate(){
-        if(!this.name || !this.ability || this.origin || !this.image1 || this.image2){
+        if(!this.name || !this.ability || !this.origin || !this.image1 || !this.image2){
             throw new Error("fill in all fields");
         }
     }
