@@ -8,7 +8,7 @@ export class deleteController {
         const response = await this.delete.execute(req.params.id);
         res.status(200).send(response);
       } catch (err) {
-        res.status(400).send(message.err);
+        res.status(400).send(err.message);
       }
     }
   }
