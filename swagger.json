@@ -15,7 +15,7 @@
       "description": "DEV API"
     },
     {
-      "url": "https://xmenapi.herokuapp.com/",
+      "url": "https://api-xmen-production.up.railway.app/",
       "description": "production API"
     }
   ],
